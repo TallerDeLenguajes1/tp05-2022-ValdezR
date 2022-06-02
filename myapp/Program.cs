@@ -10,7 +10,7 @@ namespace ejercicio2
             do
             {
                 int resultado = 0;
-
+                int bandera = 0;
                 Console.Clear();
                 Console.WriteLine("Ingrese la operacion que desea realizar:\n1. SUMA\n2. RESTA\n3. MULTIPLICACION\n4. DIVISION\n0. SALIR");
                 operacion = Convert.ToInt32(Console.ReadLine());
@@ -39,6 +39,12 @@ namespace ejercicio2
                     }
                     Console.WriteLine("--");
                     Console.WriteLine("El resultado es: " + resultado);
+                    Console.WriteLine("\nDesea realizar otro calculo? (1.SI - 0.NO)");
+                    bandera=Convert.ToInt32(Console.ReadLine());
+                    if (bandera==0)
+                    {
+                        operacion=0;
+                    }
                 }
             } while (operacion != 0) ;
         }
